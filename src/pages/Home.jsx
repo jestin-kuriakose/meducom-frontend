@@ -82,14 +82,11 @@ const Meducom = () => {
     const handleClick2 = (e) => {
         e.preventDefault()
         if(cUser) {
-            navigate('/case');
+            navigate('/meduusers');
         }
         
     }
-    const handleLogout = (e) => {
-        e.preventDefault()
-        logout(dispatch)
-    }
+    
 
     useEffect(()=> {
         const makeRequest = async() => {
@@ -114,7 +111,7 @@ const Meducom = () => {
     <Container>
     
         <Wrapper>
-        {cUser && <Button onClick={handleLogout}>LOGOUT</Button>}
+        
         {cUser && <p>user: {cUser.username}</p>}
         <Title>SIGN IN</Title>
         <Form>
